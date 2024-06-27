@@ -1,21 +1,18 @@
-//Requisição de arquivo JSON com FetchAPI
 
+
+//Requisição de arquivo JSON com FetchAPI
 let livros = [];
 const endPointAPI =
   "https://guilhermeonrails.github.io/casadocodigo/livros.json";
 getBuscarLivrosDaAPI();
 
 async function getBuscarLivrosDaAPI() {
-    const response = await fetch(endPointAPI);
-    livros = await response.json()
-    console.table(livros)
+  const response = await fetch(endPointAPI);
+  livros = await response.json();
+  console.table(livros);
+  const livroComDesconto = descontoAplicado(livros)
+  exibirLivrosNaTela(livroComDesconto)
 }
-
-livros.forEach(
-    (livro) => {
-        
-    }
-)
 
 /* <div class="livro">
 <img class="livro__imagens" src="imagens/Vue.js.png" alt="Capa do livro  Vue.js
