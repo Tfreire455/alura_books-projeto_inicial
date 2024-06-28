@@ -6,5 +6,6 @@ function FiltrarLivros() {
   let livrosFiltrados = livros.filter(
     (livro) => livro.categoria == categoria
   );
+  exibirLivrosNaTela(livrosFiltrados)
   console.table(livrosFiltrados);
 }
